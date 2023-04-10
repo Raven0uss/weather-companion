@@ -1,6 +1,6 @@
 # Weather Companion
 
-Weather companion is a small app with React, Typescript and RxJS allowing you to check the weather in all cities in the world.
+Weather companion is a small app with React and Typescript allowing you to check the weather in all cities in the world.
 
 ## How to run it ?
 
