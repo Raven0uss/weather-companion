@@ -35,7 +35,7 @@ describe("weather", () => {
           params: {
             q: "New York",
             limit: 10,
-            appid: process.env.OPEN_WEATHER_API_KEY,
+            appid: process.env.REACT_APP_OPEN_WEATHER_API_KEY,
           },
         }
       );
@@ -56,7 +56,7 @@ describe("weather", () => {
           params: {
             q: "invalid-city",
             limit: 10,
-            appid: process.env.OPEN_WEATHER_API_KEY,
+            appid: process.env.REACT_APP_OPEN_WEATHER_API_KEY,
           },
         }
       );

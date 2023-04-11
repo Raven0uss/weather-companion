@@ -2,7 +2,7 @@
 
 Weather companion is a small app with React and Typescript allowing you to check the weather in all cities in the world.
 
-## How to run it ?
+## How to run it in dev ?
 
 After cloned this project, you want to install the dependencies :
 
@@ -14,6 +14,17 @@ or
 
 ```bash
 yarn
+```
+
+You have also to provide an API Key from OpenWeather API by creating a ``.env`` file with the key value ``REACT_APP_OPEN_WEATHER_API_KEY`` :
+
+```bash
+REACT_APP_OPEN_WEATHER_API_KEY=<api_key>
+```
+or alternatively launch directly this command if use UNIX system :
+
+```bash
+touch .env ; echo "REACT_APP_OPEN_WEATHER_API_KEY=<api_key>" >> .env
 ```
 
 After that you can just launch the project like that :
@@ -59,6 +70,10 @@ npm run build
 ```
 
 You will be able to deploy it or check the production with a static server thanks to modules like ``serve`` or ``http-server``.
+
+```bash
+npx serve -s build
+```
 
 #### Credit
 
