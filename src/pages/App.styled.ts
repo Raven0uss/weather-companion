@@ -100,9 +100,10 @@ export const InputSearchCity = styled.input`
     color: #ffffff80;
   }
 
+  border: none;
+  border-radius: 0px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  border: none;
 
   background-color: rgba(${ColorScheme.CONTAINER_BG_RGB}, 0.5);
 
@@ -135,6 +136,7 @@ export const SearchButton = styled.div`
   justify-content: center;
   display: flex;
   color: rgba(255, 255, 255, 0.8);
+  border-radius: 0px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 

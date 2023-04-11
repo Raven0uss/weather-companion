@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { ColorScheme } from "../../../styles/theme";
 
 export const ForecastHorizontalScrollContainer = styled.div`
-  //   background: linear-gradient(to right, #2d91c2 0%, #1e528e00 40%);
   background-color: rgba(${ColorScheme.CONTAINER_BG_RGB}, 0.3);
   flex: 1;
   display: flex;
@@ -33,7 +32,6 @@ export const ForecastHorizontalScrollContainer = styled.div`
     cursor: -moz-grabbing;
     cursor: -webkit-grabbing;
   }
-  //   border: 1px solid black;
 `;
 
 export const ForecastHourContainer = styled.div`

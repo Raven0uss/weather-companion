@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const Bird = styled.div`
+  position: fixed;
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
   background-size: auto 100%;
   width: 88px;
   height: 125px;
   will-change: background-position;
-  
+
   animation-name: fly-cycle;
   animation-timing-function: steps(10);
   animation-iteration-count: infinite;
@@ -65,6 +66,7 @@ export const BirdContainer = styled.div`
 `;
 
 export const BirdAnimation = styled.div`
+  overflow: hidden !important;
   @keyframes fly-cycle {
     100% {
       background-position: -900px 0;
@@ -73,20 +75,23 @@ export const BirdAnimation = styled.div`
 
   @keyframes fly-right-one {
     0% {
-      transform: scale(0.3) translateX(-10vw);
-      opacity: 1;
+      transform: scale(0.3) translateX(0vw);
+      opacity: 0;
     }
 
     10% {
       transform: translateY(2vh) translateX(10vw) scale(0.4);
+      opacity: 0.2;
     }
 
     20% {
       transform: translateY(0vh) translateX(30vw) scale(0.5);
+      opacity: 0.4;
     }
 
     30% {
       transform: translateY(4vh) translateX(50vw) scale(0.6);
+      opacity: 1;
     }
 
     40% {
@@ -98,32 +103,35 @@ export const BirdAnimation = styled.div`
     }
 
     60% {
-      transform: translateY(0vh) translateX(110vw) scale(0.6);
+      transform: translateY(0vh) translateX(100vw) scale(0.6);
       opacity: 0;
     }
 
     100% {
-      transform: translateY(0vh) translateX(110vw) scale(0.6);
+      transform: translateY(0vh) translateX(100vw) scale(0.6);
       opacity: 0;
     }
   }
 
   @keyframes fly-right-two {
     0% {
-      transform: translateY(-2vh) translateX(-10vw) scale(0.5);
-      opacity: 1;
+      transform: translateY(-2vh) translateX(0vw) scale(0.5);
+      opacity: 0;
     }
 
     10% {
       transform: translateY(0vh) translateX(10vw) scale(0.4);
+      opacity: 0.2;
     }
 
     20% {
       transform: translateY(-4vh) translateX(30vw) scale(0.6);
+      opacity: 0.4;
     }
 
     30% {
       transform: translateY(1vh) translateX(50vw) scale(0.45);
+      opacity: 1;
     }
 
     40% {
@@ -135,12 +143,12 @@ export const BirdAnimation = styled.div`
     }
 
     51% {
-      transform: translateY(0vh) translateX(110vw) scale(0.45);
+      transform: translateY(0vh) translateX(100vw) scale(0.45);
       opacity: 0;
     }
 
     100% {
-      transform: translateY(0vh) translateX(110vw) scale(0.45);
+      transform: translateY(0vh) translateX(100vw) scale(0.45);
       opacity: 0;
     }
   }

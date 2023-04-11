@@ -1,3 +1,4 @@
+import React from "react";
 import { City, searchCity } from "../api";
 import Birds from "../components/Birds";
 import DisplayWeather from "../components/DisplayWeather";
@@ -13,7 +14,6 @@ import {
   InputSearchCityWrapper,
   AppWelcome,
 } from "./App.styled";
-import React from "react";
 
 const App: React.FC = () => {
   const [searchValue, setSearchValue] = React.useState("");
@@ -28,7 +28,7 @@ const App: React.FC = () => {
       const result = await searchCity(searchValue);
       setCityList(result);
       setLoading(false);
-
+      setError(false);
       setCity(null);
     } catch (err) {
       setError(true);

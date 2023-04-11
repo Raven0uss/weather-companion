@@ -1,4 +1,3 @@
-import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
 import DisplayWeather from "./";
 import { City } from "../../api";
@@ -38,7 +37,8 @@ describe("DisplayWeather component", () => {
       expect(screen.queryByTestId("loading-spinner")).not.toBeInTheDocument()
     );
 
-    expect(screen.queryByTestId("error-component")).not.toBeInTheDocument(); // assert that Error component is not rendered
+    // assert that Error component is not rendered
+    expect(screen.queryByTestId("error-component")).not.toBeInTheDocument();
     expect(screen.getByText(`${mockCity.name}`)).toBeInTheDocument();
     expect(
       screen.getByText(`${mockCity.country} - ${mockCity.state}`)
@@ -54,8 +54,9 @@ describe("DisplayWeather component", () => {
   it("renders the spinner when looking for API data", async () => {
     render(<DisplayWeather city={mockCity} />);
 
-    // Wait for the loading spinner to disappear
+    // expect loading spinner
     expect(screen.queryByTestId("loading-spinner")).toBeInTheDocument();
+    // assert that Error component is not rendered
     expect(screen.queryByTestId("error-component")).not.toBeInTheDocument();
   });
 
@@ -68,15 +69,17 @@ describe("DisplayWeather component", () => {
     );
 
     const refreshButton = screen.getByTestId("refresh-button");
-
-    expect(screen.queryByTestId("error-component")).not.toBeInTheDocument(); // assert that Error component is not rendered
+    // assert that Error component is not rendered
+    expect(screen.queryByTestId("error-component")).not.toBeInTheDocument();
     expect(screen.getByText(`${mockCity.name}`)).toBeInTheDocument();
 
+    // Click on refresh button and wait for the spinner
     refreshButton.click();
     await waitFor(() =>
       expect(screen.queryByTestId("loading-spinner")).not.toBeInTheDocument()
     );
 
-    expect(screen.queryByTestId("error-component")).not.toBeInTheDocument(); // assert that Error component is not rendered
+    // assert that Error component is not rendered
+    expect(screen.queryByTestId("error-component")).not.toBeInTheDocument(); 
   });
 });

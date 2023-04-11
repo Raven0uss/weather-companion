@@ -1,4 +1,3 @@
-import React from "react";
 import { ForecastDataPerDays } from "../../../api";
 import {
   ForecastDisplayContainer,

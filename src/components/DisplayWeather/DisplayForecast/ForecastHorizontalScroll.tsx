@@ -18,6 +18,7 @@ const ForecastHorizontalScroll: React.FC<ForecastHorizontalScrollProps> = ({
 }) => {
   const scrollRef = React.useRef<HTMLDivElement>(null);
 
+  // Manage the horizontal scroll with mouse hover
   const handleMouseMove = (e: React.MouseEvent) => {
     if (scrollRef.current) {
       scrollRef.current.scrollLeft -= e.movementX;

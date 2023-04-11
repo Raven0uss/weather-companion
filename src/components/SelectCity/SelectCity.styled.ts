@@ -6,7 +6,7 @@ export const CityListContainer = styled.div`
   display: flex;
   align-self: center;
   width: 80%;
-  margin-top: 40px;
+  margin: 40px 0;
   border-radius: 10px;
   padding: 8px;
   flex-direction: column;
