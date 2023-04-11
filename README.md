@@ -1,6 +1,6 @@
 # Weather Companion
 
-Weather companion is a small app with React and Typescript allowing you to check the weather in all cities in the world.
+Weather companion is a small app with ``React`` and ``Typescript`` allowing you to check the weather in all cities in the world. This project use ``styled-components`` for the style and not any other library, all the CSS has been wrote from scratch (except for the icon about the weather and the import for fonts). For the testing part, the project use ``Jest`` and ``React Testing Library``. It also uses ``moment`` to manage the displaying of dates, hours and calculation for the timezone.
 
 ## How to run it in dev ?
 
